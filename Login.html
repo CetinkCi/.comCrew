@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="author" content="Okan Bayrak">
+    <meta name="author" content="Merve Cetinkaya">
+    <meta name="author" content="Cigdem Cetinkaya">
+    <meta name="date" content="23.02.2017">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Login.css" rel="stylesheet">
+</head>
+
+<div id="container">
+    <div align="center">
+        <div id="header">
+            <img class="titelbild" src="images/login/header.png" />
+        </div>
+
+        <div id="body">
+
+            <form ng-submit="login(username, password)" class="ng-scope ng-pristine ng-valid">
+
+                <label id="username">
+                    <input type="text" ng-model="username" class="ng-pristine" placeholder="BENUTZERNAME" />
+                </label>
+
+
+                <label id="password">
+                    <input type="password" ng-model="password" class="ng-pristine" placeholder="PASSWORT" />
+                </label>
+
+
+                <button id="Los" class="btn-success" type="submit">LOS!</button>
+
+            </form>
+
+            <div class="registrieren"> Sie möchten mit CHECK! arbeiten?
+                <br/>
+                <div class="registrierenDeco">Jetzt registrieren.</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer" ng-show="!fullScreenMode">
+
+            <img class="footerbild" src="images/login/footer.png" alt="Logo Footer CHECK!" />
+            <br/>
+            <span class="footerproductedition">edition 2016 dark night blue 1.0</span><span id="footerversion" class="initiallyHidden"><span id="footerproductedition" class="footerproductedition" ng-show="false &amp;&amp; server.version !== ''"></span></span>
+            <span class="footerEtc"><br/> CHECK! und CHECK! Lehrerzimmer sind Produkte des Raup&amp;Ritter Verlag und der OnWerk Softwareagentur Mannheim
+                <br/>
+
+            <a href="http://www.raupundritter.com" title="Seite Raup&Ritter.com" target="_blank">www.raupundritter.com</a> &dash;
+
+            <a href="http://www.check-lehrerzimmer.com/contact/" title="Kontakt" target="_blank">Kontakt</a> &dash;
+
+            <a href="http://www.check-lehrerzimmer.com/impressum/" title="Impressum" target="_blank">Impressum</a> &dash;
+
+            <a href="http://www.check-lehrerzimmer.com/preise/" title="Preise" target="_blank">Preise</a> &dash;
+
+            <a href="http://www.check-lehrerzimmer.com/hilfe/" title="Hilfe" target="_blank">Hilfe</a></span>
+
+        </div>
+    </footer>
+</div>
+
+</html>

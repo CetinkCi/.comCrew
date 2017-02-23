@@ -1,0 +1,154 @@
+@import url('http://fonts.googleapis.com/css?family=Baloo+Paaji');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+form {
+    background-color: white;
+    width: 300px;
+    margin: auto;
+}
+
+
+
+#password input {
+    width: 300px;
+    height: 40px;
+    font-family: 'Roboto', cursive;
+    font-size: 13pt;
+    border: 2px solid #8da6d6;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#username input {
+    width: 300px;
+    height: 40px;
+    font-family: 'Roboto', cursive;
+    font-size: 13pt;
+    border: 2px solid #8da6d6;
+    padding: 8px;
+    border-radius: 6px;
+    color: #001a3a;
+    margin-bottom: 3px;
+}
+
+#Los{
+    width: 150px;
+    height: 40px;
+    font-family: 'Baloo Paaji', cursive;
+    font-size: 13pt;
+    border: 2px solid #001a3a;
+    border-radius: 6px;
+    margin: 0 auto;
+    background-color: #001a3a;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+::-webkit-input-placeholder {
+    color: #d3ddf2;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 13pt;
+}
+
+.titelbild {
+    margin-bottom: 10px;
+}
+
+.registrieren {
+    font-size: 13pt;
+    color: #8da6d6;
+    font-family: 'Roboto', cursive;
+}
+
+.registrierenDeco {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center
+}
+
+footer {
+    width: 100% background-color: white;
+    padding: 60px 0px;
+}
+
+.footerbild {
+    height: 17px;
+    width: 55px;
+}
+
+.footerproductedition {
+    font-size: 9pt;
+    color: #001a3a;
+    font-family: 'Roboto', cursive;
+}
+
+.footerEtc {
+    font-size: 9pt;
+    color: #8da6d6;
+    font-family: 'Roboto', cursive;
+    margin-bottom: 20px;
+}
+
+html,
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+#header {
+    background: white;
+    padding: 10px;
+}
+
+#body {
+    padding: 10px;
+    padding-bottom: 60px;
+    /* Height of the footer */
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    /* Height of the footer */
+    background: white;
+    margin-bottom: 20px;
+    text-align: center
+
+}
+
+.menu:link {
+    color: #ff0000;
+    text-decoration: none
+}
+
+menu:visited {
+    color: red;
+    text-decoration: none
+}
+
+.menu:active {
+    color: #000000;
+    text-decoration: none
+}
+
+.menu:hover {
+    color: #000000;
+    text-decoration: underline
+}
+#verstecktFeld {
+    margin-top: 5px;
+
+}

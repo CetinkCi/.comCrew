@@ -1,0 +1,60 @@
+@import url('http://fonts.googleapis.com/css?family=Comfortaa');
+@import url('http://fonts.googleapis.com/css?family=Baloo+Paaji');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+
+#formAvatar {
+    margin-top: 40px;
+    padding-bottom: 60px;
+    background-color: white;
+    height: 100%;
+}
+
+.profilBildAktuell {
+    height: 70px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.profilBildTitel {
+
+    font-size: 20pt;
+    font-family: 'Baloo Paaji', cursive;
+    color: #001a3a
+}
+
+.Profilbilder {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    height: 70px;
+}
+
+
+#Speichern {
+    width: 150px;
+    height: 40px;
+    font-family: 'Baloo Paaji', cursive;
+    font-size: 13pt;
+    border: 2px solid #001a3a;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #001a3a;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#Abbrechen {
+    width: 150px;
+    height: 40px;
+    font-family: 'Baloo Paaji', cursive;
+    font-size: 13pt;
+    border: 2px solid #001a3a;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #001a3a;
+    color: white;
+    margin-bottom: 20px;
+}
+

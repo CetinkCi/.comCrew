@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="author" content="Okan Bayrak">
+    <meta name="author" content="Merve Cetinkaya">
+    <meta name="author" content="Cigdem Cetinkaya">
+    <meta name="date" content="23.02.2017">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="home.css" rel="stylesheet">
+    <link href="profil_loeschen.css" rel="stylesheet">
+    <link href="bootstrap-3.3-2.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-3.3-2.7-dist/js/bootstrap.min.js" rel="stylesheet">
+</head>
+
+<body onload="selectChapter(Chapter)">
+    <div id="body" ng-style="{backgroundColor:Chapter.weakcolor}">
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="logo" align="center"> <img src="images/logo.png" /> </div>
+            <!--<img ng-src="images\illustrations\illustrationLeft.png" id="illustrationLeft" />
+            <img ng-src="images\illustrations\illustrationRight.png"  id="illustrationRight"/>
+            -->
+
+            <!--KOMPETENZ (3Striche) BUTTON-->
+            <ul id="buttonsLeft">
+                <li class="dropdown">
+                    <div class="dropdown-content">
+                        <ul id="ChapterList">
+                            <div class="triangleLeft">
+                                <li class="dropdown-header1"> <img class="links" src="images/confirmation.png" alt="Banner">
+                                    <p class="logotext"> CHECK!
+                                        <br/> KOMPETENZLISTE </p>
+                                </li>
+                                <li ng-repeat="Chapter in Chapters | orderBy: '_id'"> <a ng-style="{backgroundColor:Chapter.strongcolor}" ng-click="selectChapter(Chapter)"> {{Chapter.name}} </a> </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="menuButton dropbtn kompetenzListe"></a>
+                </li>
+            </ul>
+
+            <!--FÖRDERPLAN (FLAGGE) BUTTON-->
+            <ul id="buttonsLeft">
+                <li class="dropdown">
+                    <div class="dropdown-content">
+                        <ul id="ChapterList">
+                            <div class="triangleLeft">
+                                <li class="dropdown-header1"> <img class="links" src="images/educationalPlan-big.png" alt="Banner">
+                                    <p class="logotext"> FÖRDERPLAN
+                                        <br/> </p>
+                                </li>
+                                <li ng-repeat="Plan in FoerderPlan | orderBy: '_id'"> <a ng-click="selectFoerderPlan(Plan);"> {{Plan.name}} </a>
+                                    <script>
+                                        temp = {
+                                            {
+                                                Plan.name
+                                            }
+                                        }
+                                    </script>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="menuButton dropbtn foerderPlan"></a>
+                </li>
+            </ul>
+
+            <!--DAS KANN ICH (STERN) BUTTON-->
+            <ul id="buttonsLeft">
+                <li class="dropdown">
+                    <div class="dropdown-content">
+                        <ul id="ChapterList">
+                            <div class="triangleLeft">
+                                <li class="dropdown-header1"> <img class="links" src="images/achievedCompetences-big.png" alt="Banner">
+                                    <p class="logotext"> DAS
+                                        <br/> KANN
+                                        <br/>ICH!</p>
+                                </li> <a id="AlleKompetenzen" ng-click="selectAllCompetences(AllCompetences)">ALLE KOMPETENZEN!</a>
+                                <li ng-repeat="Chapter in Chapters | orderBy: '_id'"> <a ng-style="{backgroundColor:Chapter.strongcolor} " ng-click="selectChapterDone(Chapter) "> {{Chapter.name}} </a> </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="menuButton dropbtn kompetenzenErreicht"></a>
+            </ul>
+
+
+
+
+            <!--LOGOUT BUTTON-->
+            <ul id="buttonsRightLogout">
+                <li class="dropdown">
+                    <div class="dropdown-content-right">
+                        <ul id="ChapterList">
+                            <div class="triangleRight">
+                                <li class="dropdown-header1"> <img class="links" src="images/logout-big.png" alt="Banner">
+                                    <p class="logotext"> MÖCHTEST DU
+                                        <br/> CHECK!
+                                        <br/>VERLASSEN?</p>
+                                </li>
+                                <li> <a ng-click="logout()">JA</a> </li>
+                                <li> <a>NEIN</a> </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="menuButton dropbtn logout"></a>
+                </li>
+            </ul>
+
+            <!--HELP BUTTON-->
+            <ul id="buttonsRightHelp">
+                <li class="dropdown">
+                    <div class="dropdown-content-right">
+                        <ul id="ChapterList">
+                            <div class="triangleRight">
+                                <li class="dropdown-header1"> <img class="links" src="images/help-big.png" alt="Banner">
+                                    <p class="logotext"> BRAUCHST
+                                        <br/>DU HILFE?</p>
+                                </li>
+                                <li><a href="http://www.check-lehrerzimmer.com/hilfe/erste-schritte/">SO GEHT'S! </a></li>
+                                <li><a href="http://www.check-lehrerzimmer.com/tutorial/">VIDEO-TUTORIALS</a></li>
+                                <li><a href="http://www.check-lehrerzimmer.com/faq/">HÄUFIG GESTELLTE FRAGEN</a></li>
+                                <li><a href="http://www.check-lehrerzimmer.com/contact/">KONTAKT</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="menuButton dropbtn help"></a>
+                </li>
+            </ul>
+            <ul id="buttonsRightHelp">
+                <li class="seperator"></li>
+            </ul>
+
+            <!--KLASSE BUTTON-->
+            <ul id="buttonsRight">
+                <li class="dropdown">
+                    <div class="dropdown-content-right">
+                        <ul id="ChapterList">
+                            <div class="triangleRight">
+                                <li class="dropdown-header1">
+                                    <img class="links" ng-src=".{{User.studyGroups.imageUrlBig}}" alt="Banner">
+                                    <p class="logotext">KLASSE
+                                        <br/>{{User.studyGroups.class}}</p>
+                                    <br/>
+                                    <p class="klassenLehrerin">KLASSENLEHRER*IN</p>
+                                    <p class="lehrerName">{{User.formteacher}}</p>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <a class="classes" ng-mouseover="changeImage3=true" ng-mouseleave="changeImage3=false" ng-init="changeImage3=false"> <img ng-hide="changeImage3" ng-src='.{{User.studyGroups.imageUrlInactive}}' /> <img ng-show="changeImage3" ng-src='.{{User.studyGroups.imageUrl}}' /> </a>
+            </ul>
+
+            <!--SCHULE BUTTON-->
+            <ul id="buttonsRight">
+                <li class="dropdown">
+                    <div class="dropdown-content-right">
+                        <ul id="ChapterList">
+                            <div class="triangleRight">
+                                <li class="dropdown-header1">
+                                    <img class="links" ng-src=".{{User.school.imageUrlBig}}" alt="Banner">
+                                    <p class="logotext">{{User.school.name}}</p>
+                                    <div class="schuleInfos">
+                                        <p>{{User.school.address}}
+                                            <br/>{{User.school.country}}
+                                            <br/>
+                                            <br/>{{User.school.email}}
+                                            <br/> {{User.school.telefon}}
+                                            <p/>
+                                    </div>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <a class="school" ng-mouseover="changeImage2=true" ng-mouseleave="changeImage2=false" ng-init="changeImage2=false"> <img ng-hide="changeImage2" ng-src='.{{User.school.imageUrlInactive}}' /> <img ng-show="changeImage2" ng-src='.{{User.school.imageUrl}}' /> </a>
+            </ul>
+
+            <!--AVATAR BUTTON-->
+            <ul id="buttonsRight">
+                <li class="dropdown">
+                    <div class="dropdown-content-right">
+                        <ul id="ChapterList">
+                            <div class="triangleRight">
+                                <li class="dropdown-header1">
+                                    <img class="links" ng-src=".{{User.Avatar.avatarBigUrl}}" alt="Banner">
+                                    <div class="logotext">
+                                        <p>{{User.forename}}
+                                            <br/>{{User.surname}}</p>
+                                        <br/>
+                                    </div>
+                                    <p class="SchuelerBday">{{User.birth}}</p>
+                                </li>
+                                <li><a href="#/profilbild_aendern">MEIN PROFILBILD ÄNDERN</a></li>
+                                <li><a href="#/passwort_aendern">MEIN PASSWORT ÄNDERN</a></li>
+                                <li><a href="#/profil_loeschen">MEIN PROFIL LÖSCHEN</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <a class="avatar" ng-mouseover="changeImage1=true" ng-mouseleave="changeImage1=false" ng-init="changeImage1=false"> <img ng-hide="changeImage1" ng-src='.{{User.Avatar.avatarInactiveUrl}}' /> <img ng-show="changeImage1" ng-src='.{{User.Avatar.avatarUrl}}' /> </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!--NAV LEISTE ZU ENDE -->
+
+        <div id="deleteForm" align="center">
+            <div align="center">
+                <img class="deleteimg" src="images/delete-profile.png" />
+            </div>
+
+            <h1 id="deleteText">PROFIL LÖSCHEN</h1>
+
+            <form ng-submit="deleteUser()" class="ng-scope ng-pristine ng-valid">
+
+                <div class="form-group" align="center">
+                    <label id="passwort">Passwort*</label>
+                    <input id="input" type="password" ng-model="deletePassword" class="ng-pristine" />
+                </div>
+
+                <div>
+                    <button id="Delete" class="btn-delete" type="submit">LÖSCHEN</button>
+                    <button ng-click="break()" class="btn-success" id="Abbrechen">ABBRECHEN</button>
+                </div>
+            </form>
+
+        </div>
+
+        <!--FOOTER-->
+        <footer>
+            <div id="footer" ng-show="!fullScreenMode"> <img class="footerbild" src="images/login/footer.png" alt="Logo Footer CHECK!" />
+                <br/> <span class="footerproductedition">edition 2016 dark night blue 1.0</span> </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

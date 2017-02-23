@@ -1,0 +1,136 @@
+@import url('http://fonts.googleapis.com/css?family=Baloo+Paaji');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+form {
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#input{
+    width: 300px;
+    height: 40px;
+    font-size: 13pt;
+    border: 2px solid #8da6d6;
+    border-radius: 6px;
+}
+
+#passwordimg{
+     height: 70px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+label {
+	font-family: 'Roboto', cursive;
+	width: 200px;
+	margin: 0;
+	margin-right: 3px;
+	margin-left: 3px;
+	border: 0;
+	display: inline-block;
+	text-align: right;
+	vertical-align: middle;
+	color: #a5b5de;
+	font-size: 11pt;
+	font-weight: 800;
+	letter-spacing: 2px;
+	line-height: 11pt;
+	text-transform: uppercase;
+}
+
+#Abbrechen{
+    width: 150px;
+    height: 40px;
+    font-family: 'Baloo Paaji', cursive;
+    font-size: 13pt;
+    border: 2px solid #001a3a;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #001a3a;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#Change {
+    width: 150px;
+    height: 40px;
+    font-family: 'Baloo Paaji', cursive;
+    font-size: 13pt;
+    border: 2px solid #001a3a;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #001a3a;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#changeForm {
+    margin-top: 40px;
+    padding: 20px;
+    padding-bottom: 60px;
+    background-color: white;
+    height: 100%;
+}
+
+#changeText {
+     margin-top: 7px;
+    font-size: 20pt;
+    font-family: 'Baloo Paaji', cursive;
+}
+
+#aktuellesPasswort input {
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    font-family: Roboto-thin, sans-serif;
+    font-size: 13pt;
+    border: 2px solid #8da6d6;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#neuesPasswort input {
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    font-family: Roboto-thin, sans-serif;
+    font-size: 13pt;
+    border: 2px solid #8da6d6;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#passwort {
+    font-family: 'Roboto', cursive;
+    width: 200px;
+    margin: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    border: 0;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    color: #a5b5de;
+    font-size: 11pt;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 11pt;
+    text-transform: uppercase;
+}
+
+#passwortBestaetigung input {
+     display: block;
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    font-family: Roboto-thin, sans-serif;
+    font-size: 13pt;
+    border: 2px solid #8da6d6;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
